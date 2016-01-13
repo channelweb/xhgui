@@ -157,16 +157,19 @@
 </table>
 </div><!--/row-->
 
+{% if sql|length > 0 %}
 <div class="row-fluid">
- <h2>SQL queries</h2>
- <ul>
+ <h2>SQL queries: {{ sql|length }}</h2>
+ <ol>
     {% for q in sql %}
     <li>
     {{ q }}
     </li>
     {% endfor %}
- </ul>
+ </ol>
 </div>
+{% endif %}
+
 {% endblock %}
 
 {% block jsfoot %}
