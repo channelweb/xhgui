@@ -98,6 +98,8 @@ if (extension_loaded('uprofiler')) {
     }
 }
 
+$GLOBALS['xhprof_io'] = array();
+
 register_shutdown_function(
     function () {
         if (extension_loaded('uprofiler')) {
@@ -153,6 +155,8 @@ register_shutdown_function(
             'request_ts_micro' => $requestTsMicro,
             'request_date' => date('Y-m-d', $time),
         );
+
+        $data['io'] = $GLOBALS['xhprof_io'];
 
         try {
             $config = Xhgui_Config::all();
