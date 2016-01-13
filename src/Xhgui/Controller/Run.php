@@ -93,6 +93,7 @@ class Xhgui_Controller_Run extends Xhgui_Controller
             'memory' => $memoryChart,
             'watches' => $watchedFunctions,
             'date_format' => $this->_app->config('date.format'),
+            'sql' => $result->getSql(),
         ));
     }
 

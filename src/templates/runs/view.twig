@@ -156,6 +156,17 @@
     </tbody>
 </table>
 </div><!--/row-->
+
+<div class="row-fluid">
+ <h2>SQL queries</h2>
+ <ul>
+    {% for q in sql %}
+    <li>
+    {{ q }}
+    </li>
+    {% endfor %}
+ </ul>
+</div>
 {% endblock %}
 
 {% block jsfoot %}

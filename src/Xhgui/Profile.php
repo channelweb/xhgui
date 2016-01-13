@@ -573,4 +573,13 @@ class Xhgui_Profile
         return $this->_data;
     }
 
+    public function getSql()
+    {
+        $sql = array();
+        if (!empty($this->_data['io']['sql'])) {
+            $sql = $this->_data['io']['sql'];
+        }
+        return $sql;
+    }
+    
 }

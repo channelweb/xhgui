@@ -98,6 +98,7 @@ if (extension_loaded('uprofiler')) {
     }
 }
 
+define('XHPROF_IO_DATA', true);
 $GLOBALS['xhprof_io'] = array();
 
 register_shutdown_function(
