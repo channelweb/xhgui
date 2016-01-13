@@ -2,3 +2,6 @@
 /tags
 /vendor
 config/config.php
+/.settings/
+/.buildpath
+/.project
